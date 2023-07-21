@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "30711450062",
+    "project_id": "biketech-29b24",
+    "storage_bucket": "biketech-29b24.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:30711450062:android:53667c5d938f0d0bc8439f",
+        "android_client_info": {
+          "package_name": "com.example.biketech"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "30711450062-kt4ivpjuh24aqqqdv33c4cevqediclib.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.biketech",
+            "certificate_hash": "921aac546e3bdf0b9d0a7edaa69f4e29ea5efa47"
+          }
+        },
+        {
+          "client_id": "30711450062-u68tb9cuc1v68g3uivncn2l67kscsm3n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBv2DoKTsfBvaIpCy0aWMC8Tqgd0UeajL8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "30711450062-u68tb9cuc1v68g3uivncn2l67kscsm3n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

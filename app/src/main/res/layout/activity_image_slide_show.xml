@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ImageSlideShow"
+    android:background="@color/black">
+
+    <ImageView
+        android:id="@+id/leftswipe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/leftswipe"
+        android:layout_marginLeft="15dp"
+        android:elevation="10dp"/>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/leftswipe"
+        app:layout_constraintRight_toLeftOf="@+id/rightswipe"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/docm"
+        android:layout_marginLeft="15dp"
+        android:elevation="2dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/documentsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal"
+        android:elevation="5dp"
+        app:reverseLayout="true"/>
+
+    <ImageView
+        android:id="@+id/rightswipe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/rightswipe"
+        android:layout_marginRight="15dp"
+        android:elevation="10dp"/>
+
+    <ImageButton
+        android:id="@+id/documentCameraButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/camera"
+        android:elevation="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

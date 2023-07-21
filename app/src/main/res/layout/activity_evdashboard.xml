@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".EVDashboard">
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/evtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12:00 AM"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="@+id/evtoggle"
+        app:layout_constraintRight_toRightOf="@+id/evtoggle"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/evtoggle"
+        android:layout_width="270dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/green_out_line"
+        android:checkedButton="@+id/offer"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/evtime">
+
+        <RadioButton
+            android:id="@+id/search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/ev_toggle"
+            android:button="@null"
+            android:gravity="center"
+            android:text="POWER ON"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/offer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/ev_toggle"
+            android:button="@null"
+            android:gravity="center"
+            android:text="POWER OFF"
+            android:textColor="@color/white" />
+    </RadioGroup>
+
+    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+        android:id="@+id/EVProgressBar"
+        android:layout_width="290dp"
+        android:layout_height="255dp"
+        app:cpb_background_progressbar_color="#070000"
+        app:cpb_background_progressbar_width="5dp"
+        app:cpb_progress_direction="to_right"
+        app:cpb_progressbar_color="#4CAF50"
+        app:cpb_progressbar_width="10dp"
+        app:cpb_round_border="false"
+        app:cpb_start_angle="225"
+        android:elevation="10dp"
+        app:layout_constraintVertical_bias="0.15"
+        app:layout_constraintLeft_toLeftOf="@+id/redspeedometer"
+        app:layout_constraintRight_toRightOf="@+id/redspeedometer"
+        app:layout_constraintTop_toTopOf="@+id/redspeedometer"
+        app:layout_constraintBottom_toBottomOf="@+id/redspeedometer"/>
+
+
+    <TextView
+        android:id="@+id/EVSpeedometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:elevation="15dp"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="@id/EVProgressBar"
+        app:layout_constraintHorizontal_bias="0.480"
+        app:layout_constraintLeft_toLeftOf="@+id/EVProgressBar"
+        app:layout_constraintRight_toRightOf="@+id/EVProgressBar"
+        app:layout_constraintTop_toTopOf="@id/EVProgressBar" />
+
+    <ImageView
+        android:id="@+id/redspeedometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bluespeedometer"
+        app:layout_constraintRight_toLeftOf="@+id/guideline4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/evtoggle"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+        android:id="@+id/BatteryProgressBar"
+        android:layout_width="290dp"
+        android:layout_height="255dp"
+        app:cpb_background_progressbar_color="#000000"
+        app:cpb_background_progressbar_width="5dp"
+        app:cpb_progress_direction="to_right"
+        app:cpb_progressbar_color="#4CAF50"
+        app:cpb_progressbar_width="10dp"
+        app:cpb_round_border="false"
+        app:cpb_start_angle="225"
+        android:elevation="10dp"
+        app:layout_constraintVertical_bias="0.15"
+        app:layout_constraintLeft_toLeftOf="@+id/Batteryimage"
+        app:layout_constraintRight_toRightOf="@+id/Batteryimage"
+        app:layout_constraintTop_toTopOf="@+id/Batteryimage"
+        app:layout_constraintBottom_toBottomOf="@+id/Batteryimage"/>
+
+
+    <TextView
+        android:id="@+id/Batterymeter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:elevation="15dp"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="@id/Batteryimage"
+        app:layout_constraintLeft_toLeftOf="@+id/Batteryimage"
+        app:layout_constraintRight_toRightOf="@+id/Batteryimage"
+        app:layout_constraintTop_toTopOf="@id/Batteryimage" />
+
+    <ImageView
+        android:id="@+id/Batteryimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bluespeedometer"
+        app:layout_constraintLeft_toRightOf="@+id/guideline4"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/evtoggle"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        app:layout_constraintGuide_percent="0.5"
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+
+
+    <ImageButton
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/orangemap"
+        android:background="@drawable/image_border"
+        android:padding="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
